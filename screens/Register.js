@@ -54,7 +54,7 @@ class Register extends Component{
                                             if(this.state.email.match(mailformat))
                                             {
                                                
-                                                    axios.post('http://10.1.75.71:7000/register/', {
+                                                axios.post('http://192.168.43.65:7000/register/', {
                                                         "name":this.state.name,
                                                         "email":this.state.email,
                                                         "password":this.state.password,

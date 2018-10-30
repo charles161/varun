@@ -16,13 +16,13 @@ Navigation.registerComponent('Profile',() => Profile);
 Navigation.registerComponent('Create',() => Create);
 Navigation.registerComponent('Register',() => Register);
 Navigation.registerComponent('bookscreen',()=>bookscreen );
- Navigation.registerComponent('quizscreen',()=>quizscreen );
+Navigation.registerComponent('quizscreen',()=>quizscreen );
 
 
 export default async function () {
     
-    let val = await AsyncStorage.getItem('data');
-    if(!val){
+   
+  if (!(await AsyncStorage.getItem('data'))){
   Navigation.startSingleScreenApp({
     screen: {
       screen:'Login', // unique ID registered with Navigation.registerScreen

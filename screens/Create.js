@@ -202,12 +202,10 @@ class Create extends Component {
                         <TouchableOpacity style={styles.end}
                             onPress={async () => {
                                 let randomnum=Math.floor(1000+Math.random()*9000);
-                                axios.post('http://10.1.75.71:7000/createbook', {
+                                axios.post('http://192.168.43.65:7000/createbook', {
                                     "name":this.state.bookname,
                                     "id":randomnum+'',
                                     "questions":this.state.book
-                                    
-                        
                              })
                                  .then(res => {
                                      alert(JSON.stringify(res.data.message)+"BookId:"+randomnum)

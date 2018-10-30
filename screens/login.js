@@ -35,7 +35,7 @@ class Login extends Component{
                     onPress={() => {
                     if(this.state.email!=null){
                         if(this.state.email.match(mailformat)){
-                 axios.post('http://10.1.75.71:7000/login', {
+                 axios.post('http://192.168.43.65:7000/login', {
                                 "email":this.state.email,
                                 "password":this.state.password,
                     

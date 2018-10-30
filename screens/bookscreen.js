@@ -81,7 +81,7 @@ class Second extends Component {
                         [
                           {text: 'Try Again', onPress: () => {this.answers={}}},
                           {text: 'Submit', onPress: async () => {
-                            await axios.post('http://10.1.75.71:7000/submit',{
+                              await axios.post('http://192.168.43.65:7000/submit',{
                                 email:JSON.parse(email),
                                 bookId:this.props.data.id,
                                 score

@@ -28,7 +28,7 @@ class Home extends Component {
                         style={{ height: 40, width: 104, borderRadius: 5, marginTop: 3, alignItems: 'center', marginLeft: 200, borderColor: 'black', borderWidth: 1 ,backgroundColor:'#3a3b3b'}}
                         onPress={async () => {
                             let val = await AsyncStorage.getItem('data')
-                            axios.get('http://10.1.75.71:7000/getbook/' + this.state.text + '/'+JSON.parse(val))
+                            axios.get('http://192.168.43.65:7000/getbook/' + this.state.text + '/'+JSON.parse(val))
 
                                 .then(res => {
                                     if (res.data.message == "Book not found") {
