@@ -150,7 +150,7 @@ class Create extends Component {
                                     }
 
                                 >
-                                    <Text style={{ fontSize: 30, margin:5 ,fontStyle:"italic"}}>Add a question to the book</Text></TouchableOpacity>
+                                    <Text style={{ fontSize: 20, margin:5 ,fontStyle:"italic"}}>Add a question to the book</Text></TouchableOpacity>
 
                             </View>
                             {/* <ScrollView>

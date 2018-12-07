@@ -20,7 +20,7 @@ class Home extends Component {
                 justifyContent:"space-between",backgroundColor:'#3a3b3b'}}
              >
                 <View style={styles.cardstyle}>
-                    <Text style={{ margin:16,fontSize:24,fontWeight:"bold",fontStyle:"italic", }}>Enter your Aptitude Book id</Text>
+                    <Text style={{ margin:10,fontSize:24,fontWeight:"bold",fontStyle:"italic", }}>Enter your Aptitude Book id</Text>
                     <TextInput style={{ height: 45, borderColor: 'black', width: '100%', borderTopWidth:1,marginTop:'2%' }}
                         placeholder={'Type here !'} onChangeText={this.update}
                         value={this.state.text} />
@@ -37,7 +37,7 @@ class Home extends Component {
                                     else {
                                          this.props.navigator.push({
                                              screen: 'bookscreen',
-                                             title: 'Fill the slam..!',
+                                             title: res.data.name,
                                              animated: true,
                                              passProps: {data:res.data},
                                              animationType:  'slide-horizontal',
@@ -46,12 +46,12 @@ class Home extends Component {
                                 )
                         }}>
 
-                        <Text style={{fontSize:20,fontWeight:"bold",fontStyle:"italic",marginTop:'5%',color:'#b8babb'}}> Submit </Text>
+                        <Text style={{fontSize:15,fontWeight:"bold",fontStyle:"italic",color:'#b8babb'}}> Submit </Text>
                     </TouchableOpacity>
 
 
                 </View>
-                <View>
+                <View >
                     <TouchableOpacity style={styles.end}
                         onPress={() => {
                             this.props.navigator.push({
@@ -61,7 +61,7 @@ class Home extends Component {
                                 animationType: 'slide-horizontal',
                             })
                         }}>
-                        <Text style={{ fontSize:30,fontWeight:"bold",fontStyle:"italic", }}> Click here to Create Quiz Book </Text>
+                        <Text style={{ fontSize:20,fontWeight:"bold",fontStyle:"italic",alignSelf:'center',paddingBottom:7 }}> Click here to Create Quiz Book </Text>
                     </ TouchableOpacity>
                 </View>
 
